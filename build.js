@@ -23,12 +23,12 @@ process.on('unhandledRejection', err => {
 require('./build-script/env');
 // @remove-on-eject-begin
 // Do the preflight checks (only happens before eject).
-const verifyPackageTree = require('./build-script/utils/verifyPackageTree');
-if (process.env.SKIP_PREFLIGHT_CHECK !== 'true') {
-  verifyPackageTree();
-}
-const verifyTypeScriptSetup = require('./build-script/utils/verifyTypeScriptSetup');
-verifyTypeScriptSetup();
+// const verifyPackageTree = require('./build-script/utils/verifyPackageTree');
+// if (process.env.SKIP_PREFLIGHT_CHECK !== 'true') {
+//   verifyPackageTree();
+// }
+// const verifyTypeScriptSetup = require('./build-script/utils/verifyTypeScriptSetup');
+// verifyTypeScriptSetup();
 // @remove-on-eject-end
 
 const path = require('path');
