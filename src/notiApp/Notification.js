@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import "./Notification.scss";
 
-const Notification = ({ id, title, info, read, click, url, theme }) => {
+const Notification = ({ click, id, info, read, theme, title, url }) => {
   const handleOnClick = (value) => {
     click(id, value);
   };
@@ -38,23 +38,23 @@ const Notification = ({ id, title, info, read, click, url, theme }) => {
 };
 
 Notification.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string,
-  info: PropTypes.string,
-  read: PropTypes.bool,
   click: PropTypes.func,
-  url: PropTypes.string,
+  info: PropTypes.string,
+  id: PropTypes.string,
+  read: PropTypes.bool,
   theme: PropTypes.object,
+  title: PropTypes.string,
+  url: PropTypes.string,
 };
 
 Notification.defaultProps = {
+  click: () => {},
   id: "",
-  title: "",
   info: "",
   read: false,
-  click: () => {},
-  url: "",
+  title: "",
   theme: {},
+  url: "",
 };
 
 export default Notification;

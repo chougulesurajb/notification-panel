@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Notification from "./Notification";
 import "./Panel.scss";
 
-const Panel = ({ count, notifications, clickRead, markAll, theme }) => (
+const Panel = ({ clickRead, count, markAll, notifications, theme }) => (
   <div
     className="panel"
     style={{ backgroundColor: theme.panelBack || "lightcyan" }}
@@ -24,18 +24,18 @@ const Panel = ({ count, notifications, clickRead, markAll, theme }) => (
 );
 
 Panel.propTypes = {
-  count: PropTypes.number,
-  notifications: PropTypes.array,
   clickRead: PropTypes.func,
+  count: PropTypes.number,
   markAll: PropTypes.func,
+  notifications: PropTypes.array,
   theme: PropTypes.object,
 };
 
 Panel.defaultProps = {
-  count: 0,
-  notifications: [],
   clickRead: () => {},
+  count: 0,
   markAll: () => {},
+  notifications: [],
   theme: {},
 };
 

@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 
 import "./Button.scss";
 
-const Button = ({ pActive, label, theme, ...props }) => (
+const Button = ({ label, panelActive, theme, ...props }) => (
   <button
     style={{
-      backgroundColor: !pActive ? theme.btnBack || "darkcyan" : "darkgray",
+      backgroundColor: !panelActive ? theme.btnBack || "darkcyan" : "darkgray",
     }}
-    className={`noti-btn noti-btn-${pActive ? "active" : "inactive"}`}
+    className={`noti-btn noti-btn-${panelActive ? "active" : "inactive"}`}
     {...props}
   >
     {label}
@@ -17,14 +17,14 @@ const Button = ({ pActive, label, theme, ...props }) => (
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
-  pActive: PropTypes.bool,
-  theme: PropTypes.object,
   onClick: PropTypes.func,
+  panelActive: PropTypes.bool,
+  theme: PropTypes.object,
 };
 
 Button.defaultProps = {
   label: "",
-  pActive: false,
+  panelActive: false,
   theme: {},
   onClick: () => {},
 };
