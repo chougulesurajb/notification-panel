@@ -27,6 +27,7 @@ To run this project in server side follow below instructions:
 4. finally run `serve -s build` to run this project on `http://localhost:5000/`
 
 ### Data Model:
+```
                             ---------------------------------------------------
                             |   NotificationApp                                 |
                             ---------------------------------------------------
@@ -56,9 +57,9 @@ To run this project in server side follow below instructions:
 |click- func- handler to manage read status         |
 |url- string- redirect url for notification         |     
  ---------------------------------------------------
+```
 
-
- ### Rest API definitions to interact with the backend:
+### Rest API definitions to interact with the backend:
 
 1. GET  | get all the notifications when application loads
 2. POST | mark notification as read an update
