@@ -1,0 +1,41 @@
+.notification {
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: turquoise !important;
+  }
+
+  &-content {
+    flex-grow: 1;
+    p {
+      font-weight: 700;
+    }
+
+    span {
+      font-size: 9px;
+    }
+  }
+
+  &-mark {
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+
+  &-checked {
+    color: yellow;
+  }
+
+  &-read {
+    p {
+      font-weight: 400;
+    }
+  }
+}

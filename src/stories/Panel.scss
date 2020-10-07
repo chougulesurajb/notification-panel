@@ -1,0 +1,18 @@
+.panel {
+  position: relative;
+  border: 1px solid black;
+  width: 400px;
+
+
+  h3 {
+    padding: 20px;
+    span {
+      color: red;
+    }
+  }
+
+  &-noti {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+}

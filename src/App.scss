@@ -1,0 +1,64 @@
+.app {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  float: right;
+  right: 30px;
+  top: 30px;
+  min-width: 400px;
+}
+
+.n-btn {
+  margin: 0 0 10px 0;
+}
+
+.n-panel {
+  position: relative;
+
+  &-setting {
+    background-color: #e0ffff;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    &-h {
+      display: none;
+    }
+    &-s {
+      display: flex;
+    }
+  }
+
+  &-active {
+    visibility: visible;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 590px;
+  }
+
+  &-inactive {
+    visibility: hidden;
+    max-height: 0px;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+  }
+
+  &-rt {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    button {
+      background-color: transparent;
+      outline: none;
+      border: 1px solid teal;
+
+      &:hover {
+        cursor: pointer;
+        background-color: turquoise;
+      }
+    }
+  }
+}
